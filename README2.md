@@ -8,3 +8,4 @@ La aplicación permite al cliente cifrar la dedicatoria que se agregará a su ar
 
 El producto facilita al usuario la protección de su privacidad. Así este no tiene recelo en escribir algo mucho más personal y bonito en la dedicatoria. Esto genera mayor confianza entre la florería y el cliente. 
 
+Grecia Garcia
