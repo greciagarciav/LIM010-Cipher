@@ -5,11 +5,74 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+
+    <header>
+      <img class="cabecera" src="img/cabecera2-mi-dedicatoria.png">
+      </header> 
+
+  <main>
+    <!-- Pantalla de Bienvenida-->
+      <div class="block1" id="inicio" style="">
+        <h1>¡Bienvenido!</h1>
+        <img class="icono" src="img/arrangement-icon.png">
+        <h3>Cifra la dedicatoria para tu arreglo floral</h3>
+        <input class="sendpassword" type="text" id="contrasena"
+          placeholder="Ingresa la contraseña aquí"/>
+        <button type="button" id="btnContrasena">Siguiente</button>
+    </div>
+
+    <!-- Pantalla para hacer el cifrado-->
+    <div class="block2" id="cifrar" style="display:none;">
+      <h3>Escribe tu dedicatoria y elige tu clave de cifrado</h3>
+      <textarea class="dedicatoria" rows="15" cols="100">
+          </textarea>
+      <input class="sendname" type="text" id="nombre"
+        placeholder="Clave"/>
+      <button type="button" id="">Cifrar</button>
+    </div>
+    
+    <!-- Pantalla de resultado del cifrado-->
+    <div class="block3" id="resultadocifrado" style="display:none;">
+        <h3>Dedicatoria Original</h3>
+        <textarea rows="10" cols="50">
+            </textarea>
+        <h3>Dedicatoria Cifrada</h3>
+        <textarea rows="10" cols="50">
+            </textarea>
+        <button type="button" id="">Verificar Cifrado</button>
+      </div>
+
+    <!-- Pantalla para descifrar-->  
+    <div class="block4" id="descifrar" style="display:none;">
+          <h3>Escribe tu dedicatoria y elige tu clave de cifrado</h3>
+          <textarea rows="15" cols="100">
+              </textarea>
+          <input class="sendname" type="text" id="nombre"
+            placeholder="Clave"/>
+          <button type="button" id="">Descifrar</button>
+        </div>
+
+    <!-- Pantalla de resultado del descifrado-->   
+    <div class="block5" id="resultadodescifrado" style="display:none;">
+            <h3>Dedicatoria Cifrada</h3>
+            <textarea rows="10" cols="50">
+              </textarea>
+            <h3>Dedicatoria Original</h3>
+          <textarea rows="10" cols="50">
+              </textarea>
+            <button type="button" id="">Finalizar</button>
+          </div>
+
+  </main>
+
+    <footer>
+      <p>Copyright 2019. Florabel Corporation. Todos los derechos reservados.</p> 
+    </footer>
+
     <script src="cipher.js"></script>
     <script src="index.js"></script>
+
   </body>
 </html>
