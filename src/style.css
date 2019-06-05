@@ -113,3 +113,7 @@ button {
 .dedicatoria {
     margin-left: 335px;
 }
+
+textarea.dedicatoria {
+    margin-left: 145px;
+}

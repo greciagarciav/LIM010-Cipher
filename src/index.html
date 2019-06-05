@@ -17,7 +17,7 @@
       <div class="block1" id="inicio" style="">
         <h1>¡Bienvenido!</h1>
         <img class="icono" src="img/arrangement-icon.png">
-        <h3>Cifra la dedicatoria para tu arreglo floral</h3>
+        <h3>Ingresa y cifra la dedicatoria para tu arreglo floral</h3>
         <input class="sendpassword" type="text" id="contrasena"
           placeholder="Ingresa la contraseña aquí"/>
         <button type="button" id="btnContrasena">Siguiente</button>
@@ -26,11 +26,11 @@
     <!-- Pantalla para hacer el cifrado-->
     <div class="block2" id="cifrar" style="display:none;">
       <h3>Escribe tu dedicatoria y elige tu clave de cifrado</h3>
-      <textarea class="dedicatoria" rows="15" cols="100">
+      <textarea class="dedicatoriaoriginal" rows="15" cols="100" id="dedicatoria">
           </textarea>
-      <input class="sendname" type="text" id="nombre"
+      <input class="sendclavedecif" type="text" id="clavecif"
         placeholder="Clave"/>
-      <button type="button" id="">Cifrar</button>
+      <button type="button" id="btnCifrar">Cifrar</button>
     </div>
     
     <!-- Pantalla de resultado del cifrado-->

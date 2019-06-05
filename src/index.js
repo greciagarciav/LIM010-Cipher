@@ -13,8 +13,8 @@ btn.addEventListener('click', () =>{
 
 function ValidarContrasena(cons){
     if (cons == 'LABORATORIA') {
-        document.getElementById('cifrar').style.display="none";
-        document.getElementById('resultadocifrado').style.display="block";
+        document.getElementById('inicio').style.display="none";
+        document.getElementById('cifrar').style.display="block";
     }
     else{
         if(intentos >= 3){
@@ -28,3 +28,17 @@ function ValidarContrasena(cons){
         console.log(intentos);
     }
 }
+
+const btn2 = document.getElementById('btnCifrar');
+
+btn2.addEventListener('click', () =>{
+    let dedicatoria = document.getElementById('dedicatoria').value;
+
+    CifrarDedicatoria();
+
+    
+
+})
+
+
+
