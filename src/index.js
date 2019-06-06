@@ -36,7 +36,7 @@ btn2.addEventListener('click', () =>{
 
     CifrarDedicatoria();
 
-    
+    console.log("cifrando");
 
 })
 
