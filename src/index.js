@@ -18,7 +18,7 @@ function ValidarContrasena(cons){
     }
     else{
         if(intentos >= 3){
-            alert("Agotaste tus intentos");
+            alert("Ya utilizaste todos tus intentos, en este momento no podrás ingresar");
             //Código para bloquear el input
         }
         else{
