@@ -14,7 +14,7 @@
 
   <main>
     <!-- Pantalla de Bienvenida-->
-      <div class="block1" id="inicio" style="">
+      <div class="block1" id="inicio" >
         <h1>¡Bienvenido!</h1>
         <img class="icono" src="img/arrangement-icon.png">
         <h3>Ingresa y cifra la dedicatoria para tu arreglo floral</h3>
@@ -24,7 +24,7 @@
     </div>
 
         <!-- Pantalla para hacer el cifrado-->
-    <div class="block2" id="cifrar" style="display;">
+    <div class="block2 ocultar" id="cifrar">
       <h3>Escribe tu dedicatoria y elige tu clave de cifrado</h3>
       <textarea class="dedicatoriaoriginal" rows="15" cols="100" id="textodedicatoria">
           </textarea>
@@ -33,7 +33,7 @@
     </div>
     
     <!-- Pantalla de resultado del cifrado-->
-    <div class="block3" id="resultadocifrado" style="display;">
+    <div class="block3 ocultar" id="resultadocifrado">
         <h3>Dedicatoria Original</h3>
         <textarea rows="10" cols="50" id="txtresultadooriginal">
             </textarea>
@@ -44,7 +44,7 @@
       </div>
 
     <!-- Pantalla para descifrar-->  
-    <div class="block4" id="descifrar" style="display;">
+    <div class="block4 ocultar" id="descifrar">
           <h3>Escribe tu dedicatoria y elige tu clave de cifrado</h3>
           <textarea rows="15" cols="100" id="textodescifrar">
               </textarea>
@@ -53,7 +53,7 @@
         </div>
 
     <!-- Pantalla de resultado del descifrado-->   
-    <div class="block5" id="resultadodescifrado" style="display;">
+    <div class="block5 ocultar" id="resultadodescifrado">
             <h3>Dedicatoria Cifrada</h3>
             <textarea rows="10" cols="50" id="txtresultadodescifrado">
               </textarea>
@@ -62,6 +62,11 @@
               </textarea>
             <button type="button" id="">Finalizar</button>
           </div>
+    
+    <div class="block6 ocultar" id="bloquearIntentos">
+            <h2>Ya utilizaste todos tus intentos, en este momento no podras ingresar.</h2>
+            <img class="iconoBloquear" src="img/arrangement-icon.png">
+    </div>
 
   </main>
 

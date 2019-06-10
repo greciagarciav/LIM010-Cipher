@@ -2,33 +2,51 @@
 let intentos = 0;
 
 const btn = document.getElementById('btnContrasena');
+let contrasena = document.getElementById('contrasena');
+let inputEnter = document.getElementById('contrasena');
 
-btn.addEventListener('click', () =>{
-    let contrasena = document.getElementById('contrasena').value;
+inputEnter.addEventListener("keyup", ()  =>{
 
-    ValidarContrasena(contrasena);
+    if (contrasena.value == 'LABORATORIA') {
+        document.getElementById('btnContrasena').click;  
+    }
 
-    console.log(contrasena);
+   else{
+       // if(intentos >= 3){
+         //   document.getElementById('inicio').classList.add("ocultar");
+           // document.getElementById('bloquearIntentos').classList.remove("ocultar")
+
+     //   else{
+         //   alert("La contraseña no es correcta");
+       // };
+        
+      //  intentos++;
+        //console.log(intentos);
+    }
 });
 
-function ValidarContrasena(cons){
-    if (cons == 'LABORATORIA') {
-        document.getElementById('inicio').style.display="none";
-        document.getElementById('cifrar').style.display="block";
-    }
-    else{
-        if(intentos >= 3){
-            alert("Ya utilizaste todos tus intentos, en este momento no podrás ingresar");
-            //Código para bloquear el input
-        }
-        else{
-            alert("La contraseña no es correcta");
-        };
-        intentos++;
-        console.log(intentos);
-    }
-}
+btnContrasena.addEventListener("click", () =>{
 
+        if (contrasena.value == 'LABORATORIA') {
+            document.getElementById('inicio').classList.add("ocultar");
+            document.getElementById('cifrar').classList.remove("ocultar");  
+        }
+
+        else{
+            if(intentos >= 3){
+                document.getElementById('inicio').classList.add("ocultar");
+                document.getElementById('bloquearIntentos').classList.remove("ocultar");
+            }
+
+            else{
+                alert("La contraseña no es correcta");
+            };
+            
+            intentos++;
+            console.log(intentos);
+        }
+    });
+  
 const btn2 = document.getElementById('btnCifrar');
 
 btn2.addEventListener('click', () =>{
