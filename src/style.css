@@ -120,6 +120,10 @@ button {
     margin-left: 150px;
 }
 
+.dedicatoriaCifrada {
+    margin-left: 150px;
+}
+
 textarea.textodedicatoria {
     margin-left: 125px;
 }
@@ -150,7 +154,7 @@ textarea.textodedicatoria {
 }
 
 textarea.textodescifrar{
-    margin-left: 100px;
+    justify-content: center;
 }
 
 .desplazamientooffset2{
@@ -186,4 +190,8 @@ textarea.textodescifrar{
     max-width: 350px;
     max-height: 350px;
     margin-left: 325px;
+}
+
+textarea.txtresultadooriginal {
+
 }
