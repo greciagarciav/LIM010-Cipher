@@ -1,40 +1,43 @@
 const asciiInicio = 65;
+const asciiFin = 90;
 const alfabetoRango = 26;
 
 window.cipher = {
-   /*Es el objeto*/
   encode: (offset, string) => {
-    /* offset y string son los parametros*/
-   /* Encode es el método*/
-    let ascii = string.charCodeAt(0);
-    let cifrar = (ascii - asciiInicio + offset) % alfabetoRango + asciiInicio;
-    let letraCifrada = String.fromCharCode(cifrar);
+    let palabraCifrada = '';
+    for (let indiceLetraCifrar = 0; indiceLetraCifrar<string.length; indiceLetraCifrar++){
+      if (string.charCodeAt(indiceLetraCifrar) >= asciiInicio && string.charCodeAt(indiceLetraCifrar)<=asciiFin){
+          let ascii = string.charCodeAt(indiceLetraCifrar);
+          let cifrar = (ascii - asciiInicio + offset) % alfabetoRango + asciiInicio;
+          
+          palabraCifrada = palabraCifrada + String.fromCharCode(cifrar);
 
-      console.log(letraCifrada);
+          }
+          else if (string.charCodeAt(indiceLetraCifrar)===32) {
+            palabraCifrada = palabraCifrada + " ";
+          }
+        }
+          
+          console.log(palabraCifrada); 
 
-  },
-  decode: (offset, string) => {
-    /* Acá va tu código que descifra*/
-  },
-  practicaFor: (palabra, desplazamiento) => {
-
-    let letraNormal = '';
-    for(let i= 0; i < palabra.length; i++){
-        let letraAscii = palabra.charCodeAt(i);
-        let cifrar = (letraAscii - asciiInicio + desplazamiento) % alfabetoRango + asciiInicio;
+          },
         
-        letraNormal = letraNormal + String.fromCharCode(cifrar);
-    }
 
-    console.log(letraNormal);
-
-    // for (let i= 0; i<=10; i+=2){
-    //   if(i>5){
-    //     console.log(i);
-    //   }
-       
-    // }
-
-
-  }
-};
+  
+  decode: (offset, string) => {
+    let palabraDescifrada = '';
+    for (let indiceLetraDescifrar= 0; indiceLetraDescifrar<string.length; indiceLetraDescifrar++){
+      if   (string.charCodeAt(indiceLetraDescifrar) >= asciiInicio && string.charCodeAt(indiceLetraDescifrar)<=asciiFin){ 
+          let asciiDes = string.charCodeAt(indiceLetraDescifrar);
+          let descifrar = (asciiDes - asciiFin - offset) % alfabetoRango + asciiFin;
+          
+          palabraDescifrada = palabraDescifrada + String.fromCharCode(descifrar);
+          }
+      
+          else if(string.charCodeAt(indiceLetraCifrar)===32){
+          }
+        }
+    console.log(palabraDescifrada);
+  },
+  
+}; 
