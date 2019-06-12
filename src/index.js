@@ -1,3 +1,6 @@
+
+
+
 /* Acá va tu código */
 let intentos = 0;
 
@@ -7,7 +10,6 @@ const btnCifrarDedicatoria = document.getElementById('btnCifrar');
 const btnVerificarResultadoCifrado = document.getElementById('btnVerificarCifrado');
 const btnDescifrarDedicatoria = document.getElementById('btnDescifrar');
 const btnFinalizar = document.getElementById('btnResultadoDescifrado');
-
 
 
 
@@ -21,7 +23,8 @@ enterBtnSiguiente.addEventListener('keypress', (event)  =>{
 
 btnContrasena.addEventListener('click', () =>{
 
-        if (contrasena.value == 'LABORATORIA') {
+        // if (contrasena.value == 'LABORATORIA') {
+        if (contrasena.value == '') {
             document.getElementById('inicio').classList.add("ocultar");
             document.getElementById('cifrar').classList.remove("ocultar");  
         }
@@ -44,8 +47,19 @@ btnContrasena.addEventListener('click', () =>{
   
 
 btnCifrar.addEventListener('click', () =>{
-            document.getElementById('cifrar').classList.add("ocultar");
-            document.getElementById('resultadoCifrado').classList.remove("ocultar");
+    let palabraCifrar = document.getElementById('textodedicatoria').value; 
+    let desplazamientoCifrar = document.getElementById('desplazamientoCifrar').value;       
+        document.getElementById('cifrar').classList.add("ocultar");
+        document.getElementById('resultadoCifrado').classList.remove("ocultar");
+          console.log('palabraCifrar ' + palabraCifrar);
+          console.log('desplazamientoCifrar ' + desplazamientoCifrar);  
+
+         let ejecutarCifrado = cipher.encode(desplazamientoCifrar, palabraCifrar);
+
+         console.log(ejecutarCifrado);
+
+         document.getElementById('txtresultadooriginal').value = document.getElementById('textodedicatoria').value; 
+         document.getElementById('txtresultadocifrado').value = ejecutarCifrado;
         });
 
 
@@ -53,12 +67,17 @@ btnCifrar.addEventListener('click', () =>{
 btnVerificarResultadoCifrado.addEventListener('click', () =>{
 
             document.getElementById('resultadoCifrado').classList.add("ocultar");
-            document.getElementById('descifrar').classList.remove("ocultar");  
+            document.getElementById('descifrar').classList.remove("ocultar"); 
+            document.getElementById('textodescifrar').value = document.getElementById('txtresultadocifrado').value;  
+            document.getElementById('desplazamientoDescifrar').value = document.getElementById('desplazamientoCifrar').value; 
         });
 
 btnDescifrarDedicatoria.addEventListener('click', () =>{
     document.getElementById('descifrar').classList.add("ocultar");
-    document.getElementById('resultadoDescifrado').classList.remove("ocultar");  
+    document.getElementById('resultadoDescifrado').classList.remove("ocultar"); 
+    document.getElementById('txtresultadodescifrado').value = document.getElementById('textodescifrar').value; 
+
+    // Agregar descifrar tarea
         });
 
 btnFinalizar.addEventListener('click', () =>{
