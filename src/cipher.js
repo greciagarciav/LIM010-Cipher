@@ -28,6 +28,8 @@ window.cipher = {
 
   
   decode: (offset, string) => {
+    console.log('offset ' + offset);
+    console.log('string ' + string);
     let palabraDescifrada = '';
     for (let indiceLetraDescifrar= 0; indiceLetraDescifrar<string.length; indiceLetraDescifrar++){
       if   (string.charCodeAt(indiceLetraDescifrar) >= asciiInicio && string.charCodeAt(indiceLetraDescifrar)<=asciiFin){ 

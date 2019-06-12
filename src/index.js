@@ -1,6 +1,3 @@
-
-
-
 /* Acá va tu código */
 let intentos = 0;
 
@@ -45,7 +42,7 @@ btnContrasena.addEventListener('click', () =>{
         }
     });
   
-
+    
 btnCifrar.addEventListener('click', () =>{
     let palabraCifrar = document.getElementById('textodedicatoria').value; 
     let desplazamientoCifrar = document.getElementById('desplazamientoCifrar').value;       
@@ -73,11 +70,17 @@ btnVerificarResultadoCifrado.addEventListener('click', () =>{
         });
 
 btnDescifrarDedicatoria.addEventListener('click', () =>{
-    document.getElementById('descifrar').classList.add("ocultar");
-    document.getElementById('resultadoDescifrado').classList.remove("ocultar"); 
-    document.getElementById('txtresultadodescifrado').value = document.getElementById('textodescifrar').value; 
+    let palabraDescifrar = document.getElementById('textodescifrar').value;
+    let desplazamientoDescifrar = document.getElementById('desplazamientoDescifrar').value; 
+            document.getElementById('descifrar').classList.add("ocultar");
+            document.getElementById('resultadoDescifrado').classList.remove("ocultar"); 
+            console.log('palabraDescifrar' + palabraDescifrar);
+            console.log('desplazamientoDescifrar' + desplazamientoDescifrar);
 
-    // Agregar descifrar tarea
+            let ejecutarDescifrado = cipher.decode(desplazamientoDescifrar, palabraDescifrar);
+
+            document.getElementById('txtresultadodescifrado').value = document.getElementById('textodescifrar').value; 
+            document.getElementById('textoresultadooriginal2').value = ejecutarDescifrado;
         });
 
 btnFinalizar.addEventListener('click', () =>{

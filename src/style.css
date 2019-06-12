@@ -89,6 +89,15 @@ p {
     margin: 20px 0px 40px 0px;
     background-color: #fff;
 }
+.ocultar{
+    padding: 20px 10px 40px 10px;
+    margin: 20px 0px 40px 0px;
+    background-color: #fff;
+}
+
+.cuadro {
+    flex-direction: row;
+}
 
 button {
     padding: 5px 0px;
@@ -117,15 +126,15 @@ button {
 }
 
 .dedicatoriaOriginal {
-    margin-left: 150px;
+    margin-left: 220px;
 }
 
 .dedicatoriaCifrada {
-    margin-left: 150px;
+    margin-left: 220px;
 }
 
 textarea.textodedicatoria {
-    margin-left: 125px;
+    margin-left: 220px;
 }
 
 .desplazamientooffset1{
