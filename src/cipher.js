@@ -5,8 +5,6 @@ const alfabetoRango = 26;
 window.cipher = {
   encode: (offset, string) => {
 
-    console.log('offset ' + offset);
-    console.log('string ' + string);
     let palabraCifrada = '';
     for (let indiceLetraCifrar = 0; indiceLetraCifrar<string.length; indiceLetraCifrar++){
       if (string.charCodeAt(indiceLetraCifrar) >= asciiInicio && string.charCodeAt(indiceLetraCifrar)<=asciiFin){
@@ -20,16 +18,14 @@ window.cipher = {
             palabraCifrada = palabraCifrada + " ";
           }
         }
-          
-        console.log(palabraCifrada); 
+           
         return palabraCifrada;
   },
         
 
   
   decode: (offset, string) => {
-    console.log('offset ' + offset);
-    console.log('string ' + string);
+
     let palabraDescifrada = '';
     for (let indiceLetraDescifrar= 0; indiceLetraDescifrar<string.length; indiceLetraDescifrar++){
       if   (string.charCodeAt(indiceLetraDescifrar) >= asciiInicio && string.charCodeAt(indiceLetraDescifrar)<=asciiFin){ 
@@ -43,7 +39,7 @@ window.cipher = {
             palabraDescifrada = palabraDescifrada + " ";
           }
         }
-    console.log(palabraDescifrada);
+        
     return palabraDescifrada;
   },
   

@@ -189,10 +189,16 @@ button {
     display: block;
     margin-left: 350px;
 }
+
 .txtAviso1 {
     margin: 10px 190px 10px;
 }
 
 .txtAviso2 {
     margin: 300px 190px 10px;
+}
+
+.incorrecta {
+    margin: 10px 0px;
+    color: red; 
 }
