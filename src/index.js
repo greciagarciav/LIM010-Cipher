@@ -20,8 +20,8 @@ enterBtnSiguiente.addEventListener('keypress', (event)  =>{
 
 btnContrasena.addEventListener('click', () =>{
 
-        // if (contrasena.value == 'LABORATORIA') {
-        if (contrasena.value == '') {
+        if (contrasena.value == 'LABORATORIA') {
+        
             document.getElementById('inicio').classList.add("ocultar");
             document.getElementById('cifrar').classList.remove("ocultar");  
         }

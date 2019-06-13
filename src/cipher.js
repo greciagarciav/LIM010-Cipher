@@ -39,7 +39,8 @@ window.cipher = {
           palabraDescifrada = palabraDescifrada + String.fromCharCode(descifrar);
           }
       
-          else if(string.charCodeAt(indiceLetraCifrar)===32){
+          else if(string.charCodeAt(indiceLetraDescifrar)===32){
+            palabraDescifrada = palabraDescifrada + " ";
           }
         }
     console.log(palabraDescifrada);

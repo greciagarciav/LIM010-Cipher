@@ -13,6 +13,13 @@ body {
     color: #5e715c;
     background-image: url("img/love-colors.jpg");
   }
+
+footer{
+    padding: 3px;
+    margin: 0px;
+    background-color: #fff;
+    box-sizing: content-box;
+}
   
 h1 {
     color: #b23165;
@@ -23,85 +30,27 @@ h1 {
 
 h2 {
     color: #b23165;
-    font-size: 30px;
+    font-size: 18px;
     text-align: center;
+    margin:  15px 250px 15px 250px;
 }
 
 h3 {
     color: #b23165;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
 }
 
 p {
     color: #5e715c;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
     padding: 0px 20px;
-    margin: 5px 0px 10px 0px;
+    margin: 0px 190px 0px 190px;
   }
-
-.cabecera{
-    max-width: 1000px;
-    margin-left: 200px;
-}
-
-.icono{
-    max-width: 250px;
-    max-height: 250px;
-    margin-left: 370px;
-}
-
-.block1 {
-    padding: 10px 10px 10px 10px;
-    margin: 10px 0px 10px 0px;
-    background-color: #fff;
-    border: 0;
-    height: 425px;
-}
-
-.block2 {
-    padding: 20px 10px 40px 10px;
-    margin: 20px 0px 40px 0px;
-    background-color: #fff;
-}
-
-.block3 {
-    padding: 20px 10px 40px 10px;
-    margin: 20px 0px 40px 0px;
-    background-color: #fff;
-}
-
-.block4 {
-    padding: 20px 10px 40px 10px;
-    margin: 20px 0px 40px 0px;
-    background-color: #fff;
-}
-
-.block5 {
-    padding: 20px 10px 40px 10px;
-    margin: 20px 0px 40px 0px;
-    background-color: #fff;
-}
-
-.block6 {
-    padding: 20px 10px 40px 10px;
-    margin: 20px 0px 40px 0px;
-    background-color: #fff;
-}
-.ocultar{
-    padding: 20px 10px 40px 10px;
-    margin: 20px 0px 40px 0px;
-    background-color: #fff;
-}
-
-.cuadro {
-    flex-direction: row;
-}
 
 button {
     padding: 5px 0px;
-    margin-left: 165px;
     width: 300px;
     color: #fff;
     font-size: 20px;
@@ -114,9 +63,77 @@ button {
     margin-left: 340px;
 }
 
+.cabecera{
+    max-width: 1000px;
+    margin-left: 200px;
+}
+
+.icono{
+    max-width: 400px;
+    max-height: 400px;
+    margin-left: 300px;
+}
+
+.iconoBloquear{
+    max-width: 500px;
+    max-height: 500px;
+    margin-left: 250px;
+}
+
+.block1 {
+    padding: 20px 10px 40px 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #fff;
+    border: 0;
+    height: 425px;
+}
+
+.block2 {
+    padding: 20px 10px 40px 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #fff;
+}
+
+.block3 {
+    padding: 30px 10px 40px 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #fff;
+}
+
+.block4 {
+    padding: 20px 10px 40px 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #fff;
+}
+
+.block5 {
+    padding: 30px 10px 40px 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #fff;
+}
+
+.block6 {
+    padding: 20px 10px 40px 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #fff;
+}
+
+.cuadro {
+    display: flex;
+}
+
+.cuadroDerecha{
+    float: right;
+    margin-right: 50px;
+}
+
+.cuadroIzquierda{
+    float: left;
+    margin-left: 50px;
+}
 .sendpassword {
     padding: 10px;
-    margin: 0 70px 10px 70px;
+    margin: 0px 70px 10px 70px;
     width: 300px;
     color: #724971;
     font-size: 15px;
@@ -126,15 +143,11 @@ button {
 }
 
 .dedicatoriaOriginal {
-    margin-left: 220px;
+    margin-left: 190px;
 }
 
 .dedicatoriaCifrada {
-    margin-left: 220px;
-}
-
-textarea.textodedicatoria {
-    margin-left: 220px;
+    margin-left: 190px;
 }
 
 .desplazamientooffset1{
@@ -148,24 +161,6 @@ textarea.textodedicatoria {
     margin-left: 340px;
 }
 
-#btnCifrar.btn2{
-    padding: 5px 0px;
-    width: 300px;
-    color: #fff;
-    font-size: 20px;
-    font-family: sans-serif;
-    background-color: #b23165;
-    text-align: center;
-    border-radius: 30px;
-    cursor: pointer;
-    display: block;
-    margin-left: 340px;
-}
-
-textarea.textodescifrar{
-    justify-content: center;
-}
-
 .desplazamientooffset2{
     padding: 10px;
     margin: 0 70px 10px 70px;
@@ -177,7 +172,11 @@ textarea.textodescifrar{
     margin-left: 340px;
 }
 
-#btnDescifrar.btn3{
+.ocultar{
+    display: none;
+}
+
+#btnCifrar.btn2{
     padding: 5px 0px;
     width: 300px;
     color: #fff;
@@ -188,19 +187,12 @@ textarea.textodescifrar{
     border-radius: 30px;
     cursor: pointer;
     display: block;
-    margin-left: 340px;
+    margin-left: 350px;
+}
+.txtAviso1 {
+    margin: 10px 190px 10px;
 }
 
-.ocultar{
-    display: none;
-}
-
-.iconoBloquear{
-    max-width: 350px;
-    max-height: 350px;
-    margin-left: 325px;
-}
-
-textarea.txtresultadooriginal {
-
+.txtAviso2 {
+    margin: 300px 190px 10px;
 }
