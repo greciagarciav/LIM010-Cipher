@@ -50,9 +50,9 @@ btnCifrarDedicatoria.addEventListener('click', () =>{
 
          let ejecutarCifrado = cipher.encode(desplazamientoCifrar, palabraCifrar);
 
-
          document.getElementById('txtresultadooriginal').value = document.getElementById('textodedicatoria').value; 
          document.getElementById('txtresultadocifrado').value = ejecutarCifrado;
+
         });
 
 
@@ -76,6 +76,7 @@ btnDescifrarDedicatoria.addEventListener('click', () =>{
 
             document.getElementById('txtresultadodescifrado').value = document.getElementById('textodescifrar').value; 
             document.getElementById('textoresultadooriginal2').value = ejecutarDescifrado;
+
         });
 
 

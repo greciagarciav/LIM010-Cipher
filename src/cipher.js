@@ -17,12 +17,17 @@ window.cipher = {
           else if (string.charCodeAt(indiceLetraCifrar)===32) {
             palabraCifrada = palabraCifrada + " ";
           }
-        }
-           
-        return palabraCifrada;
+          else if (string.charCodeAt(indiceLetraCifrar)===46) {
+            palabraCifrada = palabraCifrada + ".";
+          }
+          else if (string.charCodeAt(indiceLetraCifrar)===44) {
+          palabraCifrada = palabraCifrada + ",";
+          }
+        }        
+      
+        return palabraCifrada
   },
         
-
   
   decode: (offset, string) => {
 
@@ -35,12 +40,16 @@ window.cipher = {
           palabraDescifrada = palabraDescifrada + String.fromCharCode(descifrar);
           }
       
-          else if(string.charCodeAt(indiceLetraDescifrar)===32){
+          else if (string.charCodeAt(indiceLetraDescifrar)===32){
             palabraDescifrada = palabraDescifrada + " ";
           }
+          else if (string.charCodeAt(indiceLetraDescifrar)===46){
+            palabraDescifrada = palabraDescifrada + ".";
+          }
+          else if (string.charCodeAt(indiceLetraDescifrar)===44){
+          palabraDescifrada = palabraDescifrada + ",";
+          }
         }
-        
-    return palabraDescifrada;
-  },
-  
+    return palabraDescifrada
+    },
 }; 
