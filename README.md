@@ -6,6 +6,7 @@ README
 
 - [Índice](#índice)
 - [Resumen](#resumen)
+- [Imagen final de mi proyecto](#imagen-final-de-mi-proyecto)
 - [Usuarios](#usuarios)
 - [Objetivos](#objetivos)
 - [Problemas que resuelve](#problemas-que-resuelve)
@@ -17,6 +18,18 @@ README
 ## Resumen
 
 Se creará una aplicación web que permita a las florerias proteger la privacidad de los clientes que desean agregar una dedicatoria muy personal a sus arreglos florales. Solo la persona encargada de escribir la dedicatoria en los arreglos florales podrá verla y esto generará mayor confianza entre la floreria y el cliente. 
+
+## Imagen final de mi proyecto
+
+![MDS 1](https://user-images.githubusercontent.com/51206642/59610049-381bdb80-90de-11e9-8bb4-3c55b185e3db.PNG)
+
+![MDS 2](https://user-images.githubusercontent.com/51206642/59610050-38b47200-90de-11e9-8da8-66a6f5e920a9.PNG)
+
+![MDS 3](https://user-images.githubusercontent.com/51206642/59610052-394d0880-90de-11e9-9015-304c651dfc1e.PNG)
+
+![MDS 4](https://user-images.githubusercontent.com/51206642/59610053-394d0880-90de-11e9-9e03-efd9dbe2f52f.PNG)
+
+![MDS 5](https://user-images.githubusercontent.com/51206642/59610047-381bdb80-90de-11e9-88b9-c53986bc3e90.PNG)
 
 
 ## Usuarios
