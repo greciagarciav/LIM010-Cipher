@@ -11,9 +11,11 @@ const btnFinalizar = document.getElementById('btnResultadoDescifrado');
 
 contrasena.addEventListener('keypress', (event)  =>{
     
+    document.getElementById('msjConstrasenaIncorrecta').classList.add("ocultar");
+    
     if (event.keyCode===13) {
         btnContrasena.click(contrasena.value);
-        }
+        }   
 
 });
 
@@ -60,8 +62,7 @@ btnVerificarResultadoCifrado.addEventListener('click', () =>{
 
             document.getElementById('resultadoCifrado').classList.add("ocultar");
             document.getElementById('descifrar').classList.remove("ocultar"); 
-            document.getElementById('textodescifrar').value = document.getElementById('txtresultadocifrado').value;  
-            document.getElementById('desplazamientoDescifrar').value = document.getElementById('desplazamientoCifrar').value; 
+
         });
 
 
@@ -84,5 +85,13 @@ btnFinalizar.addEventListener('click', () =>{
     document.getElementById('resultadoDescifrado').classList.add("ocultar");
     document.getElementById('inicio').classList.remove("ocultar"); 
     document.getElementById('contrasena').value = '';
-    document.getElementById('msjConstrasenaIncorrecta').classList.add("ocultar")
+    document.getElementById('msjConstrasenaIncorrecta').classList.add("ocultar");
+    document.getElementById('textodedicatoria').value = '';
+    document.getElementById('desplazamientoCifrar').value = '';
+    document.getElementById('txtresultadooriginal').value = '';
+    document.getElementById('txtresultadocifrado').value = '';
+    document.getElementById('textodescifrar').value = '';
+    document.getElementById('desplazamientoDescifrar').value = '';
+    document.getElementById('txtresultadodescifrado').value = '';
+    document.getElementById('textoresultadooriginal2').value = '';
 });
