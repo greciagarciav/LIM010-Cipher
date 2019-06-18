@@ -7,7 +7,10 @@ const btnCifrarDedicatoria = document.getElementById('btnCifrar');
 const btnVerificarResultadoCifrado = document.getElementById('btnVerificarCifrado');
 const btnDescifrarDedicatoria = document.getElementById('btnDescifrar');
 const btnFinalizar = document.getElementById('btnResultadoDescifrado');
-
+const txtdedicatoria = document.getElementById('textodedicatoria');
+const offsetCifrar = document.getElementById('desplazamientoCifrar');
+const txtdedicatoriaCifrada = document.getElementById('textodescifrar');
+const offsetDescifrar = document.getElementById('desplazamientoDescifrar');
 
 contrasena.addEventListener('keypress', (event)  =>{
     
@@ -42,10 +45,17 @@ btnContrasena.addEventListener('click', () =>{
         }
     });
   
+txtdedicatoria.addEventListener('keypress', ()=>{
+        document.getElementById('debesEscribirTuDedicatoria').classList.add("ocultar");
+        document.getElementById('desplazamientoCifrar').value = '';
+     })
     
+
 btnCifrarDedicatoria.addEventListener('click', () =>{
     let palabraCifrar = document.getElementById('textodedicatoria').value; 
-    let desplazamientoCifrar = document.getElementById('desplazamientoCifrar').value;       
+    let desplazamientoCifrar = document.getElementById('desplazamientoCifrar').value; 
+   
+    if (txtdedicatoria.value !== '' && offsetCifrar.value !== ''){  
         document.getElementById('cifrar').classList.add("ocultar");
         document.getElementById('resultadoCifrado').classList.remove("ocultar");
 
@@ -55,7 +65,13 @@ btnCifrarDedicatoria.addEventListener('click', () =>{
          document.getElementById('txtresultadooriginal').value = document.getElementById('textodedicatoria').value; 
          document.getElementById('txtresultadocifrado').value = ejecutarCifrado;
 
-        });
+        }
+        else {
+
+            document.getElementById('debesEscribirTuDedicatoria').classList.remove("ocultar");
+            document.getElementById('textodedicatoria').value = '';
+        }   
+});
 
 
 btnVerificarResultadoCifrado.addEventListener('click', () =>{
@@ -68,7 +84,9 @@ btnVerificarResultadoCifrado.addEventListener('click', () =>{
 
 btnDescifrarDedicatoria.addEventListener('click', () =>{
     let palabraDescifrar = document.getElementById('textodescifrar').value;
-    let desplazamientoDescifrar = document.getElementById('desplazamientoDescifrar').value; 
+    let desplazamientoDescifrar = document.getElementById('desplazamientoDescifrar').value;
+    
+    if (txtdedicatoriaCifrada!=='' && offsetDescifrar!==''){
             document.getElementById('descifrar').classList.add("ocultar");
             document.getElementById('resultadoDescifrado').classList.remove("ocultar"); 
 
@@ -77,7 +95,10 @@ btnDescifrarDedicatoria.addEventListener('click', () =>{
 
             document.getElementById('txtresultadodescifrado').value = document.getElementById('textodescifrar').value; 
             document.getElementById('textoresultadooriginal2').value = ejecutarDescifrado;
-
+        }
+        // else{
+        //     document.getElementById('debesPegarTuDedicatoria').classList.remove("ocultar");
+        // }
         });
 
 
