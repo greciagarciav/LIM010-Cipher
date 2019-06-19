@@ -1,4 +1,4 @@
-/* Acá va tu código */
+
 let intentos = 0;
 
 const btnContrasena = document.getElementById('btnContrasena');
@@ -43,7 +43,7 @@ btnContrasena.addEventListener('click', () =>{
             
             intentos++;
         }
-    });
+});
   
 txtdedicatoria.addEventListener('keypress', ()=>{
         document.getElementById('debesEscribirTuDedicatoria').classList.add("ocultar");
@@ -79,14 +79,19 @@ btnVerificarResultadoCifrado.addEventListener('click', () =>{
             document.getElementById('resultadoCifrado').classList.add("ocultar");
             document.getElementById('descifrar').classList.remove("ocultar"); 
 
-        });
+});
 
+
+txtdedicatoriaCifrada.addEventListener('keypress', () =>{
+        document.getElementById('debesPegarTuDedicatoria').classList.add("ocultar");
+        document.getElementById('desplazamientoDescifrar').value = '';
+})
 
 btnDescifrarDedicatoria.addEventListener('click', () =>{
     let palabraDescifrar = document.getElementById('textodescifrar').value;
     let desplazamientoDescifrar = document.getElementById('desplazamientoDescifrar').value;
     
-    if (txtdedicatoriaCifrada!=='' && offsetDescifrar!==''){
+    if (txtdedicatoriaCifrada.value !=='' && offsetDescifrar.value !==''){
             document.getElementById('descifrar').classList.add("ocultar");
             document.getElementById('resultadoDescifrado').classList.remove("ocultar"); 
 
@@ -96,10 +101,11 @@ btnDescifrarDedicatoria.addEventListener('click', () =>{
             document.getElementById('txtresultadodescifrado').value = document.getElementById('textodescifrar').value; 
             document.getElementById('textoresultadooriginal2').value = ejecutarDescifrado;
         }
-        // else{
-        //     document.getElementById('debesPegarTuDedicatoria').classList.remove("ocultar");
-        // }
-        });
+        else{
+            document.getElementById('debesPegarTuDedicatoria').classList.remove("ocultar");
+            document.getElementById('textodescifrar').value = '';
+    }
+});
 
 
 btnFinalizar.addEventListener('click', () =>{

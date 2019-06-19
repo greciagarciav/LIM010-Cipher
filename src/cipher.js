@@ -19,13 +19,17 @@ window.cipher = {
           let cifrar = (ascii - asciiInicio + Number(offset)) % alfabetoRango + asciiInicio;
           palabraCifrada = palabraCifrada + String.fromCharCode(cifrar);
          
-        } else if ( ascii>=asciiMinInicio && ascii<=asciiMinFin)   {
+        }else if ( ascii>=asciiMinInicio && ascii<=asciiMinFin)   {
           let cifrarMin = (ascii- asciiMinInicio + Number(offset))% alfabetoRango + asciiMinInicio;
           palabraCifrada = palabraCifrada + String.fromCharCode(cifrarMin);
         
-        } else if (ascii>=asciiNumInicio && ascii<=asciiNumFin){
+        }else if (ascii>=asciiNumInicio && ascii<=asciiNumFin){
           let cifrarNum = (ascii- asciiNumInicio + Number(offset))% numerosRango + asciiNumInicio;
           palabraCifrada = palabraCifrada + String.fromCharCode(cifrarNum);
+        
+        }else if (ascii >= asciiInicio && ascii <= asciiFin && offset == Math.sign(-offset)){
+          let cifrarNeg = (ascii- asciiInicio + offset)% alfabetoRango + asciiInicio;
+          palabraCifrada = palabraCifrada + String.fromCharCode(cifrarNeg);
 
         }else if (ascii===32) {
           palabraCifrada = palabraCifrada + " ";
