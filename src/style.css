@@ -1,5 +1,5 @@
 /* Acá van tus reglas de estilo */
-header {
+header, footer {
     padding: 3px;
     margin: 0px;
     background-color: #fff;
@@ -13,13 +13,6 @@ body {
     color: #5e715c;
     background-image: url("img/love-colors.jpg");
   }
-
-footer{
-    padding: 3px;
-    margin: 0px;
-    background-color: #fff;
-    box-sizing: content-box;
-}
   
 h1 {
     color: #b23165;
@@ -80,21 +73,19 @@ button {
     margin-left: 250px;
 }
 
-.block1 {
-    padding: 20px 10px 40px 10px;
-    margin: 10px 0px 10px 0px;
-    background-color: #fff;
-    border: 0;
-    height: 425px;
-}
-
-.block2 {
+.block1, .block2, .block3, .block4, .block5, .block6 {
     padding: 20px 10px 40px 10px;
     margin: 10px 0px 10px 0px;
     background-color: #fff;
 }
 
-.block3 {
+/* .block2 {
+    padding: 20px 10px 40px 10px;
+    margin: 10px 0px 10px 0px;
+    background-color: #fff;
+} */
+
+/* .block3 {
     padding: 30px 10px 40px 10px;
     margin: 10px 0px 10px 0px;
     background-color: #fff;
@@ -116,7 +107,7 @@ button {
     padding: 20px 10px 40px 10px;
     margin: 10px 0px 10px 0px;
     background-color: #fff;
-}
+} */
 
 .cuadro {
     display: flex;
@@ -142,15 +133,15 @@ button {
     margin-left: 330px;
 }
 
-.dedicatoriaOriginal {
+.dedicatoriaOriginal, .dedicatoriaCifrada {
     margin: 0px 220PX;
 }
 
-.dedicatoriaCifrada {
+/* .dedicatoriaCifrada {
     margin: 0px 220PX;
-}
+} */
 
-.desplazamientooffset1{
+.desplazamientooffset1, .desplazamientooffset2{
     padding: 10px;
     margin: 0 70px 10px 70px;
     width: 300px;
@@ -161,7 +152,7 @@ button {
     margin-left: 340px;
 }
 
-.desplazamientooffset2{
+/* .desplazamientooffset2{
     padding: 10px;
     margin: 0 70px 10px 70px;
     width: 300px;
@@ -170,7 +161,7 @@ button {
     text-align: center;
     border-radius: 30px;
     margin-left: 340px;
-}
+} */
 
 .ocultar{
     display: none;
