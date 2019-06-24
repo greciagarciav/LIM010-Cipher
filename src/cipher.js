@@ -27,9 +27,9 @@ window.cipher = {
           let cifrarNum = (ascii- asciiNumInicio + Number(offset))% numerosRango + asciiNumInicio;
           palabraCifrada = palabraCifrada + String.fromCharCode(cifrarNum);
         
-        }else if (ascii >= asciiInicio && ascii <= asciiFin && offset == Math.sign(-offset)){
-          let cifrarNeg = (ascii- asciiInicio + offset)% alfabetoRango + asciiInicio;
-          palabraCifrada = palabraCifrada + String.fromCharCode(cifrarNeg);
+        // }else if (ascii >= asciiInicio && ascii <= asciiFin && offset == Math.sign(-offset)){
+        //   let cifrarNeg = (ascii- asciiInicio + offset)% alfabetoRango + asciiInicio;
+        //   palabraCifrada = palabraCifrada + String.fromCharCode(cifrarNeg);
 
         }else if (ascii===32) {
           palabraCifrada = palabraCifrada + " ";
